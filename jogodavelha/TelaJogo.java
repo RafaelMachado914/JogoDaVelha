@@ -5,6 +5,7 @@
 package jogodavelha;
 
 import java.awt.Color;
+import javax.swing.JOptionPane;
 import javax.swing.JToggleButton;
 
 /**
@@ -187,38 +188,47 @@ public class TelaJogo extends javax.swing.JFrame {
 
     private void jToggleButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton8ActionPerformed
         logicaJogo(jToggleButton8);
+        verificarGanhador();
     }//GEN-LAST:event_jToggleButton8ActionPerformed
 
     private void jToggleButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton3ActionPerformed
         logicaJogo(jToggleButton3);
+        verificarGanhador();
     }//GEN-LAST:event_jToggleButton3ActionPerformed
 
     private void jToggleButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton4ActionPerformed
        logicaJogo(jToggleButton4);
+       verificarGanhador();
     }//GEN-LAST:event_jToggleButton4ActionPerformed
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
        logicaJogo(jToggleButton1);
+       verificarGanhador();
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
         logicaJogo(jToggleButton2);
+        verificarGanhador();
     }//GEN-LAST:event_jToggleButton2ActionPerformed
 
     private void jToggleButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton9ActionPerformed
         logicaJogo(jToggleButton9);
+        verificarGanhador();
     }//GEN-LAST:event_jToggleButton9ActionPerformed
 
     private void jToggleButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton7ActionPerformed
         logicaJogo(jToggleButton7);
+        verificarGanhador();
     }//GEN-LAST:event_jToggleButton7ActionPerformed
 
     private void jToggleButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton6ActionPerformed
         logicaJogo(jToggleButton6);
+        verificarGanhador();
     }//GEN-LAST:event_jToggleButton6ActionPerformed
 
     private void jToggleButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton5ActionPerformed
         logicaJogo(jToggleButton5);
+        verificarGanhador();
     }//GEN-LAST:event_jToggleButton5ActionPerformed
 
     private void ResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ResetActionPerformed
@@ -269,7 +279,7 @@ public class TelaJogo extends javax.swing.JFrame {
             botao.setText("X");
             botao.setBackground(Color.pink);
             auxiliar ++;
-           if(botao.getBackground() == Color.cyan){
+           if(botao.getText() == "O"){
               botao.setText("O");
               botao.setBackground(Color.cyan); 
            }
@@ -279,7 +289,7 @@ public class TelaJogo extends javax.swing.JFrame {
             botao.setText("O");
             botao.setBackground(Color.cyan);
             auxiliar ++;
-              if(botao.getBackground() == Color.pink){
+             if(botao.getText() == "X"){
               botao.setText("X");
               botao.setBackground(Color.pink); 
            }
@@ -307,7 +317,81 @@ public class TelaJogo extends javax.swing.JFrame {
         jToggleButton8.setText("");
         jToggleButton9.setText("");
     }
+    
+    public void verificarGanhador(){
+        if(jToggleButton4.getText()== "X" & jToggleButton3.getText()== "X" & jToggleButton1.getText()== "X"){
+              JOptionPane.showMessageDialog(null,"JOGADOR 2 GANHOU");
+              limpar();
+        }
+        else if(jToggleButton2.getText()== "X" & jToggleButton8.getText()== "X" & jToggleButton9.getText()== "X"){
+             JOptionPane.showMessageDialog(null,"JOGADOR 2 GANHOU");
+             limpar();
+        }
+        else if(jToggleButton7.getText()== "X" & jToggleButton6.getText()== "X" & jToggleButton5.getText()== "X"){
+             JOptionPane.showMessageDialog(null,"JOGADOR 2 GANHOU");
+             limpar();
+        }
+        else if(jToggleButton4.getText()== "X" & jToggleButton8.getText()== "X" & jToggleButton5.getText()== "X"){
+             JOptionPane.showMessageDialog(null,"JOGADOR 2 GANHOU");
+             limpar();
+        }
+        else if(jToggleButton7.getText()== "X" & jToggleButton8.getText()== "X" & jToggleButton1.getText()== "X"){
+             JOptionPane.showMessageDialog(null,"JOGADOR 2 GANHOU");
+             limpar();
+        }
+        else if(jToggleButton4.getText()== "X" & jToggleButton2.getText()== "X" & jToggleButton7.getText()== "X"){
+             JOptionPane.showMessageDialog(null,"JOGADOR 2 GANHOU");
+             limpar();
+        }
+        else if(jToggleButton3.getText()== "X" & jToggleButton8.getText()== "X" & jToggleButton6.getText()== "X"){
+             JOptionPane.showMessageDialog(null,"JOGADOR 2 GANHOU");
+             limpar();
+        }
+        else if(jToggleButton1.getText()== "X" & jToggleButton9.getText()== "X" & jToggleButton5.getText()== "X"){
+             JOptionPane.showMessageDialog(null,"JOGADOR 2 GANHOU");
+             limpar();
+        }
+        
+        
+        
+        
+        
+        
+        else if(jToggleButton4.getText()== "O" & jToggleButton3.getText()== "O" & jToggleButton1.getText()== "O"){
+             JOptionPane.showMessageDialog(null,"JOGADOR 1 GANHOU");
+             limpar();
+        }
+        else if(jToggleButton2.getText()== "O" & jToggleButton8.getText()== "O" & jToggleButton9.getText()== "O"){
+             JOptionPane.showMessageDialog(null,"JOGADOR 1 GANHOU");
+             limpar();
+        }
+        else if(jToggleButton7.getText()== "O" & jToggleButton6.getText()== "O" & jToggleButton5.getText()== "O"){
+             JOptionPane.showMessageDialog(null,"JOGADOR 1 GANHOU");
+             limpar();
+        }
+        else if(jToggleButton4.getText()== "O" & jToggleButton8.getText()== "O" & jToggleButton5.getText()== "O"){
+             JOptionPane.showMessageDialog(null,"JOGADOR 1 GANHOU");
+             limpar();
+        }
+        else if(jToggleButton7.getText()== "O" & jToggleButton8.getText()== "O" & jToggleButton1.getText()== "O"){
+             JOptionPane.showMessageDialog(null,"JOGADOR 1 GANHOU");
+             limpar();
+        }
+        else if(jToggleButton4.getText()== "O" & jToggleButton2.getText()== "O" & jToggleButton7.getText()== "O"){
+             JOptionPane.showMessageDialog(null,"JOGADOR 1 GANHOU");
+             limpar();
+        }
+        else if(jToggleButton3.getText()== "O" & jToggleButton8.getText()== "O" & jToggleButton6.getText()== "O"){
+             JOptionPane.showMessageDialog(null,"JOGADOR 1 GANHOU");
+             limpar();
+        }
+        else if(jToggleButton1.getText()== "O" & jToggleButton9.getText()== "O" & jToggleButton5.getText()== "O"){
+             JOptionPane.showMessageDialog(null,"JOGADOR 1 GANHOU");
+             limpar();
+        }
+       
 
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Reset;
     private javax.swing.JPanel jPanel1;
